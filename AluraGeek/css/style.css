@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    text-decoration: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --primeira-color: #8C0375;
+    --segunda-color: #2ecc71;
+    --terceira-color: #e74c3c;
+    --quarta-color: #5D04d9;
+    --bordas-color: #03318c;
+    --font-2p: 'Press Start 2P', system-ui;
+}
+
+/* MOBILE */
+
+.body{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 6rem;
+
+    background-color:var(--quarta-color) ;
+    align-items: center;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2.5rem;
+    
+}
+
+.add_produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 26.8rem;
+    height: 32.3;
+    gap:2.5rem;
+    margin-top:2rem;
+}
+
+h1{
+    font-family: var(--font-2p);
+    font-size: 24;
+}
+
+input{
+    margin: 1px;
+    width: 21.8rem;
+    height: 3.6rem;
+    border: 2px solid #ccc;
+    border-radius: 250px;
+    margin-bottom: 10px;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-color: var(--bordas-color);
+    
+}
+
+
+
+footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 10.5rem;
+    
+    background-color:var(--quarta-color) ;
+    align-items: center;
+    
+}
+
+a{
+    color: white;
+}
+
+
+
+/* ajuste telas menores que 370px */
+
+@media (max-width:370px){
+    .imagem__topo,.imagem_inferior,.ancora__GitHub,main{
+
+        width: 100vw;
+        height: 10vh;
+    }
+}
+
+/* 430px+ */
+
+@media (min-width:431px){
+
+
+}

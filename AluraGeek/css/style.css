@@ -9,7 +9,7 @@
 }
 
 :root {
-    --primeira-color: #8C0375;
+    --primaria-color: #FFFFFF;
     --segunda-color: #2ecc71;
     --terceira-color: #e74c3c;
     --quarta-color: #5D04d9;
@@ -77,8 +77,30 @@ input {
     color: var(--secundaria-color);
 }
 
-.frame_produtos {
+.div_btn{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
     
+}
+
+.btn_guardar, .btn_limpar{
+    width: 10.1rem;
+    height: 3.4rem;
+    border-radius: 15px;
+    font-family: var(--font-ibm);
+    font-size: medium;
+    font-weight: 20px;
+    
+}
+.btn_guardar{
+    background-color: var(--secundaria-color);
+    color: var(--primaria-color);
+}
+
+.btn_limpar{
+    background-color: var(--primaria-color);
+    color: var(--secundaria-color);
 }
 
 footer {

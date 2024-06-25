@@ -103,25 +103,6 @@ a {
     color: var(--secundaria-color);
 }
 
-/* ajuste telas menores que 370px */
-@media (max-width: 370px) {
-    .imagem__topo, .imagem_inferior, .ancora__GitHub {
-        width: 100vw;
-        height: 10vh;
-    }
-
-    .add_produto {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-    }
-
-    input {
-        width: 90%;
-        padding: 1rem;
-    }
-}
-
 /* 430px+ */
 @media (min-width: 431px) {
     

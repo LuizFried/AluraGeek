@@ -91,8 +91,15 @@ input {
     font-family: var(--font-ibm);
     font-size: medium;
     font-weight: 20px;
-    
+       
 }
+
+.btn_guardar:hover, .btn_limpar:hover, input:hover, .ancora__GitHub:hover{
+    border-color: var(--terceira-color);
+    color: var(--terceira-color);
+}
+
+
 .btn_guardar{
     background-color: var(--secundaria-color);
     color: var(--primaria-color);

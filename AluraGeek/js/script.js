@@ -1,23 +1,56 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const inputNome = document.getElementById('input_nome');
+    const inputPreco = document.getElementById('input_preco');
+    const inputImagem = document.getElementById('input_url');
+    const form = document.querySelector('.add_produto');
+    const containerProdutos = document.querySelector('.container_produtos');
 
+    const produtos = [
+        { nome: "Produto 1", descricao: "Descrição do Produto 1", preco: 10.99, imagem: "img/stormtrooper.png" },
+        { nome: "Produto 2", descricao: "Descrição do Produto 2", preco: 19.99, imagem: "img/GameBoy.png" },
+    ];
 
+    function renderizarProdutos() {
+        containerProdutos.innerHTML = '';
+        produtos.forEach(produto => {
+            const produtoHTML = `
+                <div class="produto">
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                    <h2>${produto.nome}</h2>
+                    <p>${produto.descricao}</p>
+                    <p>R$ ${produto.preco.toFixed(2)}</p>
+                </div>
+            `;
+            containerProdutos.innerHTML += produtoHTML;
+        });
+    }
 
-const produtos = [
-    { nome: "Produto 1", descricao: "Descrição do Produto 1", preco: 10.99, imagem: "caminho_para_imagem_do_produto1" },
-    { nome: "Produto 2", descricao: "Descrição do Produto 2", preco: 19.99, imagem: "caminho_para_imagem_do_produto2" },
-    
-];
+    renderizarProdutos();
 
-const containerProdutos = document.querySelector('.container_produtos');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-produtos.forEach(produto => {
-    const produtoHTML = `
-        <div class="produto">
-            <img src="img/${produto.imagem}" alt="${produto.nome}">
-            <h2>${produto.nome}</h2>
-            <p>${produto.descricao}</p>
-            <p>R$ ${produto.preco}</p>
-        </div>
-    `;
-    
-    containerProdutos.innerHTML += produtoHTML;
+        const novoProduto = {
+            nome: inputNome.value.trim(),
+            descricao: "Descrição do novo produto",
+            preco: parseFloat(inputPreco.value),
+            imagem: inputImagem.value.trim()
+        };
+
+        console.log('Novo Produto:', novoProduto);
+
+        
+        if (novoProduto.nome && !isNaN(novoProduto.preco) && novoProduto.imagem) {
+            produtos.push(novoProduto);
+            console.log('Produto adicionado ao array:', produtos);
+            renderizarProdutos();
+
+            
+            inputNome.value = '';
+            inputPreco.value = '';
+            inputImagem.value = '';
+        } else {
+            alert('Por favor, preencha todos os campos corretamente.');
+        }
+    });
 });

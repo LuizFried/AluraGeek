@@ -9,38 +9,28 @@
 </head>
 <body>
     <header>
-        <img class="imagem__topo" src="img/Logo.png" 
-        alt="Alura geek">
+        <img class="imagem__topo" src="img/Logo.png" alt="Alura geek">
     </header>
 
     <main>
         <form class="add_produto">
             <h1>Adicionar<br> Produto:</h1>
-            <input type="text" name="nome" placeholder="Nome...">
-            <input type="text" name="preco" placeholder="Preço...">
-            <input type="text" name="imagem" placeholder="URL da imagem...">
+            <input id="input_nome" type="text" name="nome" placeholder="Nome...">
+            <input id="input_preco" type="text" name="preco" placeholder="Preço...">
+            <input id="input_url" type="text" name="imagem" placeholder="URL da imagem...">
 
             <div class="div_btn">
                 <button class="btn_guardar" type="submit">Guardar</button>
                 <button class="btn_limpar" type="reset">Limpar</button>
             </div>
-
         </form>
 
-        <div class="container_produtos">
-            <div class="produto">
-                <img src="" alt="">
-                <h2>Nome do Produto</h2>
-                <p>Descrição do Produto</p>
-                <p>R$ Preço do Produto</p>
-            </div>
-        </div>
+        <div class="container_produtos"></div>
     </main>
 
     <footer>
-        <img class="imagem_inferior" src="img/AluraGeekTopSide.png" alt="Alura geek"></img>
+        <img class="imagem_inferior" src="img/AluraGeekTopSide.png" alt="Alura geek">
         <a class="ancora__GitHub" href="https://github.com/LuizFried" target="_blank">Desenvolvido por Luiz Felipe</a>
     </footer>
-    
 </body>
 </html>

@@ -110,6 +110,19 @@ input {
     color: var(--secundaria-color);
 }
 
+.container_produtos{
+    width: 26.8rem;
+    height: 35rem;
+    max-height: 43rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 1%;
+
+}
+
+
 footer {
     display: flex;
     flex-direction: column;

@@ -16,9 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const produtoHTML = `
                 <div class="produto">
                     <img src="${produto.imagem}" alt="${produto.nome}">
-                    <h2>${produto.nome}</h2>
-                    <p>${produto.descricao}</p>
-                    <p>R$ ${produto.preco.toFixed(2)}</p>
+                    
                 </div>
             `;
             containerProdutos.innerHTML += produtoHTML;
